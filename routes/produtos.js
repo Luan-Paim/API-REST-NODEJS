@@ -26,7 +26,7 @@ router.get('/:produtoId', (req, res) => {
     .then(id => {
         res.status(200).json({
             message: 'Produto encontrado',
-            id: id
+            produto: id
         })
     })
     .catch(err => {
@@ -69,7 +69,7 @@ router.put('/:produtoId', (req, res, next) =>{
     .then(id => {        
         res.status(200).json({
             message: 'Produto encontrado e atualizado',
-            id: id
+            produto: id
         })
     })
     .catch(err => {
@@ -87,7 +87,7 @@ router.delete('/:produtoId', (req, res, next) =>{
     .then(id => {
         res.status(200).json({
             message: 'Produto encontrado e deletado',
-            id:id
+            produto:id
         })
     })
     .catch(err => {
